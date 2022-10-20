@@ -29,6 +29,48 @@ namespace tic_tac_toe
             var tile = Tiles.Single(x => x.Choice == choice);
             tile.Value = value;
         }
-        public record WinningPosition(string A, string B, string C);
+        
+        public string GetWinner()
+        {
+            return WinningPositions
+                .Select(x => GetWinner(x))
+                .FirstOrDefault(x => x.IsWinner)?.Winner;
+        }
+
+        private WinResult GetWinner(WinningPosition position)
+        {
+            var one = GetValue(position.A);
+            var two = GetValue(position.B);
+            var three = GetValue(position.C);
+
+            if (one != " " && one == two && two == three)
+            {
+                return WinResult.HasWinner(one);
+            }
+            return WinResult.NoWinner();
+        }
+        public class WinResult
+        {
+            private WinResult(bool isWinner, string winner)
+            {
+                IsWinner = isWinner;
+                Winner = winner;
+            }
+
+            public static WinResult HasWinner(string winner)
+            {
+                return new WinResult(true, winner);
+            }
+
+            public static WinResult NoWinner()
+            {
+                return new WinResult(false, null);
+            }
+
+            public bool IsWinner { get; }
+            public string Winner { get; }
+        }
     }
+}
+    public record WinningPosition(string A, string B, string C);
 }
