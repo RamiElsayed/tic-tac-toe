@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\tic-tac-toe\\tic-tac-toe\\tic-tac-toe.csproj",
+      "projectUniqueName": "D:\\Dev\\Projects\\tic-tac-toe\\tic-tac-toe\\tic-tac-toe.csproj",
       "projectName": "tic-tac-toe",
-      "projectPath": "D:\\Dev\\tic-tac-toe\\tic-tac-toe\\tic-tac-toe.csproj",
+      "projectPath": "D:\\Dev\\Projects\\tic-tac-toe\\tic-tac-toe\\tic-tac-toe.csproj",
       "packagesPath": "C:\\Users\\Rami\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\tic-tac-toe\\tic-tac-toe\\obj\\",
+      "outputPath": "D:\\Dev\\Projects\\tic-tac-toe\\tic-tac-toe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rami\\AppData\\Roaming\\NuGet\\NuGet.Config",
